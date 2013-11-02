@@ -17,5 +17,12 @@
     "moment": "~2.4.0",
     "express": "~3.4.4",
     "mongoose": "~3.8.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-compass": "~0.6.0",
+    "grunt-cli": "~0.1.9",
+    "grunt-contrib-watch": "~0.5.3",
+    "charlatan": "~0.1.8",
+    "grunt": "~0.4.1"
   }
 }
