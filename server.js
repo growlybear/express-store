@@ -9,6 +9,8 @@ var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 
+var mongoose = require('mongoose');
+
 var app = express();
 
 // all environments
@@ -31,6 +33,19 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/users', user.list);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+// connect to mongo the start server
+function connectToMongo(callback) {
+  var db = 'mongodb://localhost/analytics';
+
+  mongoose.connect();
+  mongoose.connection.on('open', function (db) {
+    console.log('Connected to DB at ' + db);
+    callback();
+  })
+}
+
+connectToMongo(function () {
+  http.createServer(app).listen(app.get('port'), function(){
+    console.log('Express server listening on port ' + app.get('port'));
+  });
 });
