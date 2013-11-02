@@ -8,8 +8,14 @@
   },
   "author": "Michael Allan",
   "license": "BSD-2-Clause",
-
   "engines": {
     "node": "~0.10.21"
+  },
+  "dependencies": {
+    "async": "~0.2.9",
+    "ejs": "~0.8.4",
+    "moment": "~2.4.0",
+    "express": "~3.4.4",
+    "mongoose": "~3.8.0"
   }
 }
