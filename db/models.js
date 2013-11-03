@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var schemas = require('./schemas');
+var schemas = require('./schemas'); // picks up index.js, which references each Schema
 
 var models = {};
 
