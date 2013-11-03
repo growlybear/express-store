@@ -1,4 +1,4 @@
-db
+db/mongo_data
 local
 mongod.lock
 
