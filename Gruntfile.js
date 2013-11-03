@@ -12,8 +12,19 @@ module.exports = function (grunt) {
         options: {
           sassDir: 'sass',
           cssDir: 'public/stylesheets',
-          outputStyle: 'compact',
+          outputStyle: 'nested',
+          noLineComments: true,
           require: 'zurb-foundation'
+        }
+      },
+      dist: {
+        options: {
+          sassDir: 'sass',
+          cssDir: 'public/stylesheets',
+          outputStyle: 'compact',
+          noLineComments: true,
+          require: 'zurb-foundation',
+          environment: 'production'
         }
       }
     },
