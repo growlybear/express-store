@@ -37,11 +37,11 @@ app.get('/users', user.list);
 function connectToMongo(callback) {
   var db = 'mongodb://localhost/analytics';
 
-  mongoose.connect();
-  mongoose.connection.on('open', function (db) {
+  mongoose.connect(db);
+  mongoose.connection.on('open', function () {
     console.log('Connected to DB at ' + db);
     callback();
-  })
+  });
 }
 
 connectToMongo(function () {
