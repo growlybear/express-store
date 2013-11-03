@@ -1,3 +1,7 @@
+db
+local
+mongod.lock
+
 .sass-cache
 
 npm-debug.log
