@@ -6,7 +6,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js -w routes"
+    "start": "nodemon server.js -w routes",
+    "mongo": "mongod --config db/mongo.conf"
   },
   "author": "Michael Allan",
   "license": "BSD-2-Clause",
