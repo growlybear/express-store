@@ -1,6 +1,19 @@
+@import "foundation/components/global";
+@import "foundation/components/grid";
+@import "foundation/components/type";
+@import "foundation/components/buttons";
+@import "foundation/components/labels";
+@import "foundation/components/forms";
+@import "foundation/components/section";
+@import "foundation/components/top-bar";
+@import "foundation/components/panels";
+
+$bg-color: #fff;
+
 body {
-  font: 14px 'lucia grande', helvetica, arial, sans-serif;
+  font: 14px "lucia grande", helvetica, arial, sans-serif;
   padding: 50px;
+  background-color: $bg-color;
 }
 
 a {
