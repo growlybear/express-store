@@ -1,3 +1,5 @@
+.DS_Store
+
 db/mongo_data
 local
 mongod.lock
