@@ -3,7 +3,11 @@
   <div class="row">
     <div class="large-4 columns">
       <div class="panel chart">
-        Chart #1
+        <ul>
+        {{#each model}}
+          <li>{{ this }}</li>
+        {{/each}}
+        </ul>
       </div>
     </div>
 
