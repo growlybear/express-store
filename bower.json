@@ -23,6 +23,8 @@
     "handlebars": "~1.0.0",
     "jquery": "~2.0.3",
     "jquery-ui": "~1.10.3",
-    "modernizr": "~2.6.2"
+    "modernizr": "~2.6.2",
+    "foundation-icons": "*",
+    "foundation": "~4.3.2"
   }
 }
