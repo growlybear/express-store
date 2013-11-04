@@ -8,14 +8,64 @@
 @import "foundation/components/top-bar";
 @import "foundation/components/panels";
 
-$bg-color: #fff;
 
-body {
-  font: 14px "lucia grande", helvetica, arial, sans-serif;
-  padding: 50px;
-  background-color: $bg-color;
+
+.app-header {
+  margin-bottom: 40px;
 }
 
-a {
-  color: #00b7ff;
+.routes li.route {
+  a {
+    $active-color: #4f96de;
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+    position: relative;
+
+    &:hover {
+      background: darken($active-color, 25%);
+    }
+
+    &.active, &.active:hover {
+      background-color: $active-color;
+      border-left: 2px solid #fff;
+      border-right: 2px solid #fff;
+    }
+
+    &.active {
+      &:before {
+        $arrow-size: 16px;
+
+        position: absolute;
+        left: 50%;
+        bottom: -$arrow-size*2;
+        margin-left: -$arrow-size;
+        content: '';
+        width: 0;
+        height: 0;
+
+        border: $arrow-size solid transparent;
+        border-top: $arrow-size solid $active-color
+      }
+    }
+  }
+}
+
+// rating control
+.control {
+  padding: 5px 0 20px;
+
+  label {
+    margin-bottom: 10px;
+    display: inline-block;
+    background-color: #ffbda3;
+    padding: 3px;
+    text-shadow: 1px 1px 2px #fff;
+  }
+
+  select {
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    background: none;
+    height: 150px;
+  }
 }
